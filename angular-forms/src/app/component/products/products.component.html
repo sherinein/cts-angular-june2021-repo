@@ -1,0 +1,26 @@
+<p>products works!</p>
+<div class="card m-3">
+    <h3 class="card-header">Product Details</h3>
+<div class="card-body">
+<div class="card-block">
+<table class="table table-bordered table-striped">
+    <div *ngIf="products.length>0">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let product of products">
+        <td>{{product.productName}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+</tbody>
+</div>
+</table>
+</div>
+</div>
+</div>

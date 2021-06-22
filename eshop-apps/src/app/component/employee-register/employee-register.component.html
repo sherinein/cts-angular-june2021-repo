@@ -1,0 +1,22 @@
+<p>employee-register works!</p>
+<div [hidden]="submitted" style="width:500px;">
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <div class="form-group">
+            <label> Employee ID </label>
+            <input formControlName="employeeid" 
+                   type="text"
+                   class="form-control"
+                   required
+                   name="employeeid">
+           </div>
+            <div class="form-group">
+            <label> Employee Name </label>
+            <input formControlName="employeename" 
+                   type="text"
+                   class="form-control"
+                   required
+                   name="employeename">
+           </div>
+           <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

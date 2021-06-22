@@ -1,0 +1,10 @@
+<p>mobile works!</p>
+{{userCategories}}
+
+<ul>
+    <li *ngFor="let brand of brandNames">
+        {{brand}}
+    </li>
+</ul>
+
+<button (click)="sendOutput()">SendOutput</button>

@@ -1,0 +1,41 @@
+<div class="container">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()"  novalidate>
+        <div class="form-group row">
+            <label for="productname" class="col-sm-2 col-form-label">Product Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" formControlName="productname">
+                <span class="text-danger"
+                *ngIf="(registerFormControl.productname.touched || submitted) && registerFormControl.productname.errors?.required">
+                    Product Name is required
+                 </span>
+        </div>
+      </div>
+      <div class="form-group row">
+          <label for="quantity" class="col-sm-2 col-form-label">Quantity</label>
+          <div class="col-sm-10">
+              <input type="text" name="quantity" class="form-control" formControlName="quantity">
+              
+            <span class="text-danger"
+             *ngIf="(registerFormControl.quantity.touched || submitted) && registerFormControl.quantity.errors?.required">
+                     Product Quantity is required
+            </span>
+          </div>
+         
+      </div>
+      <div class="form-group row">
+          <label for="price" class="col-sm-2 col-form-label">Price</label>
+          <div class="col-sm-10">
+              <input type="text" name="price" class="form-control" formControlName="price">
+              <span class="text-danger"
+            *ngIf="(registerFormControl.price.touched || submitted) && registerFormControl.price.errors?.required">
+              Price digit should be minimum 3 and maximum 10  
+            </span>
+          </div>
+         
+      </div>
+      <div class="text-center">
+          <button [disabled]='!registerForm.valid' class="btn btn-success" type="submit">Register Product</button>
+      </div>
+    </form>
+</div>
+<router-outlet></router-outlet>

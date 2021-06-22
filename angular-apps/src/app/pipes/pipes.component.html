@@ -1,0 +1,26 @@
+<p>pipes works!</p>
+string pipe
+Name {{empname | uppercase}} <br/>
+username {{username|lowercase }}<br/>
+
+<b>Date pipes</b><br/>
+Full Date {{todayDate| date :'fullDate'}}<br/>
+Short Date {{todayDate| date :'shortDate'}}<br/>
+Full Time {{todayDate| date :'fullTime'}}<br/>
+Short Time {{todayDate| date :'shortTime'}}<br/>
+Date {{todayDate| date :'yyyy/MM/dd'}}<br/>
+
+salary {{salary | currency :'INR'}}<br/>
+
+salary {{salary | currency :'INR':false}}<br/>
+
+
+percent
+{{num | percent}}<br/>
+
+number format
+{{salary|number:'3.1-3'}} <br/><!--3 digit left and 1 or 2 digit right-->
+
+{{salary| number:'2.1-2'}}<br/>
+
+{{names | slice :1:3}}<br/>

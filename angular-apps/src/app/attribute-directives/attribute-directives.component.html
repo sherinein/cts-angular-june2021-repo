@@ -1,0 +1,27 @@
+<p>attribute-directives works!</p>
+<div [ngSwitch]=color>
+    <p *ngSwitchCase='"red"'>
+        This is red color
+    </p>
+    <p *ngSwitchCase='"green"'>
+        This is green color
+    </p>
+    <p *ngSwitchDefault>
+        Default color
+    </p>
+</div>
+
+<div [ngStyle]="{'background-color':'red','color':'white'}">
+    Welcome to Attribute Directives - ng Style
+</div>
+
+Red  <input type="radio" name="theme" value="red" [(ngModel)]="themecolor"/>
+Green <input type="radio" name="theme" value="green" [(ngModel)]="themecolor"/>
+<br/>
+you selected theme color name is <b> {{themecolor}}</b>
+<div [ngClass]="{'paraInRed':themecolor=='red'}">
+    selected theme color is red
+</div>
+<div [ngClass]="{'paraInGreen':themecolor=='green'}">
+    selected theme color is green
+</div>

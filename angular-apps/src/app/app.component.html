@@ -1,0 +1,18 @@
+
+{{title}}
+
+<input [value]='name'>
+<br>
+<input type="text" name="modelName" [(ngModel)]="modelName"/>
+you chosen mobile model is <b>{{modelName}}</b>
+<br>
+<br>
+<button (click)="showMobile()">Click to Show Mobile</button>
+<app-mobile [usercategory]=mycategory *ngIf="isMobile" (eventEmitter)="output=$event"></app-mobile>
+
+Received output from component2 <b>{{output}}</b>
+
+
+<br>
+<b> Attribute Directives</b>
+<app-pipes></app-pipes>
